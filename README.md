@@ -4,7 +4,7 @@ Created: 4.10.2022
 Author : Milos
 restart LCDa posle svakog ciklusa ispisa
 ispis error i PB ready povezan na mrezu
-	EE prom upis na svaku S komandu ne i P
+	EE prom write on all S commands not on P commands
 	
 	On Arduino board with CH340 it is used TxRx0 so must be removed resistors 59 ohm R12 i R13 and chip CH340 to cut the PS, then programm the atmel 2560.	
 	turn on the fuses "OCDEN", "JTAGEN", and "BOOTRST" even with warnings with ISP  6 pin connector
@@ -45,7 +45,7 @@ UAM2=3816418xxxxx ....
 128radi timer 2 16 bitni 100mS
 prebacivanje temp por promenjeno						
 nisu isti bitovi za sbrc i sbrs ide 0-7, bst od 1-2       
-Upis brojeva u EE komanda UAM1=381628033381
+Upis brojeva u EE komanda UAM1=3816280xxxxxx
 
 Answers:
 SR
