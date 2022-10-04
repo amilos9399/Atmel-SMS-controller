@@ -1,16 +1,18 @@
 # Atmel-SMS-controller with Arduino board and cheap chinesse modem
+```
 asm file
 Created: 4.10.2022
 Author : Milos
 restart LCDa posle svakog ciklusa ispisa
 ispis error i PB ready povezan na mrezu
-	EE prom write on all S commands not on P commands
-	
-	On Arduino board with CH340 it is used TxRx0 so must be removed resistors 59 ohm R12 i R13 and chip CH340 to cut the PS, then programm the atmel 2560.	
-	turn on the fuses "OCDEN", "JTAGEN", and "BOOTRST" even with warnings with ISP  6 pin connector
-	then programm the board with Jtag or ISP connector.		
+EE prom write on all S commands not on P commands
+```
+On Arduino board with CH340 it is used TxRx0 so must be removed resistors 59 ohm R12 i R13 and chip CH340 to cut the PS, then programm the atmel 2560.	
+turn on the fuses "OCDEN", "JTAGEN", and "BOOTRST" even with warnings with ISP  6 pin connector
+then programm the board with Jtag or ISP connector.		
 
-Status Fuses	
+### Status Fuses:
+```
 BODLEVEL = 4V3
 OCDEN = [ ]
 JTAGEN = [X]
@@ -26,8 +28,9 @@ SUT_CKSEL = EXTXOSC_8MHZ_XX_16KCK_65MS
 EXTENDED = 0xFC (valid)
 HIGH = 0x80 (valid)
 LOW = 0xFF (valid)
-
-SMS COMMANDS - possible to send to controller with modem
+```
+### SMS COMMANDS - possible to send to controller with modem
+```
 SR-Time of work without reset or Power black out
 S?? Status of outputs
 T?? Temperature
@@ -46,13 +49,15 @@ UAM2=3816418xxxxx ....
 prebacivanje temp por promenjeno						
 nisu isti bitovi za sbrc i sbrs ide 0-7, bst od 1-2       
 Upis brojeva u EE komanda UAM1=3816280xxxxxx
-
-Answers:
+```
+### Answers:
+```
 SR
 Vreme rada $A(novi red) 000Dan00Sat00Min
 S??
 1OFF2OFF3OFF4OFF
 T??
+```
 
 
                    
